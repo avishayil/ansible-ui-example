@@ -1,8 +1,8 @@
 
-# scm:
-#     type: git
-#     repository: https://github.com/avishayil/ansible-ui-example
-#     rev: master
+scm:
+    type: git
+    repository: https://github.com/avishayil/ansible-ui-example
+    rev: master
 
 #notify when build fails or build status changes (according to previous status)
 #to use email notification notify.mail section in server config should be
@@ -23,17 +23,17 @@
 
 playbooks:
     - name: Hello CyberArk Playbook
-      path: ../playbook1.yml
+      path: playbook1.yml
       inventories:
           - name: Staging
-            path: ../inventories/staging/hosts.yml
+            path: inventories/staging/hosts.yml
           - name: Production
-            path: ../inventories/production/hosts.yml
+            path: inventories/production/hosts.yml
 
     - name: Hello World Playbook
-      path: ../playbook2.yml
+      path: playbook2.yml
       inventories:
           - name: Staging
-            path: ../inventories/staging/hosts.yml
+            path: inventories/staging/hosts.yml
           - name: Production
-            path: ../inventories/production/hosts.yml
+            path: inventories/production/hosts.yml
