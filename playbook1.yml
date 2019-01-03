@@ -1,0 +1,15 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+
+    - name: Echo Hello CyberArk
+      shell: |
+        echo "Hello CyberArk"
+      register: my_echo
+
+    - name: Ensure Hello CyberArk
+      debug:
+        msg: "{{ my_echo.stdout }}"

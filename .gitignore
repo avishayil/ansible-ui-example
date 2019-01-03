@@ -1,0 +1,3 @@
+ansible-ui/data/db
+ansible-ui/data/projects/**/workspace
+ansible-ui/node_modules

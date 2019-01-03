@@ -1,0 +1,39 @@
+
+# scm:
+#     type: git
+#     repository: https://github.com/avishayil/ansible-ui-example
+#     rev: master
+
+#notify when build fails or build status changes (according to previous status)
+#to use email notification notify.mail section in server config should be
+#configured
+
+# notify:
+#     on:
+#         - error
+#         - change
+#     to:
+#         mail:
+#             - your_mail@example.com
+
+#some shell steps before run playbook with inventories
+# steps:
+#     - name: Install Ansible-Galaxy Requirements
+#       cmd: ansible-galaxy -r requirements.yml
+
+playbooks:
+    - name: Hello CyberArk Playbook
+      path: ../playbook1.yml
+      inventories:
+          - name: Staging
+            path: ../inventories/staging/hosts.yml
+          - name: Production
+            path: ../inventories/production/hosts.yml
+
+    - name: Hello World Playbook
+      path: ../playbook2.yml
+      inventories:
+          - name: Staging
+            path: ../inventories/staging/hosts.yml
+          - name: Production
+            path: ../inventories/production/hosts.yml

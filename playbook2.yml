@@ -1,0 +1,15 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+
+    - name: Echo Hello World
+      shell: |
+        echo "Hello World"
+      register: my_echo
+
+    - name: Ensure Hello World
+      debug:
+        msg: "{{ my_echo.stdout }}"
