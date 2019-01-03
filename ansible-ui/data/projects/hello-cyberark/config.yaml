@@ -17,9 +17,9 @@ scm:
 #             - your_mail@example.com
 
 #some shell steps before run playbook with inventories
-# steps:
-#     - name: Install Ansible-Galaxy Requirements
-#       cmd: ansible-galaxy -r requirements.yml
+steps:
+    - name: Say Hello
+      cmd: echo 'Hello CyberArk'
 
 playbooks:
     - name: Hello CyberArk Playbook
